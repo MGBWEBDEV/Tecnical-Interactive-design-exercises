@@ -26,16 +26,14 @@ function GeneralInfo() {
                 onChange={(e) => setInfo({...info, name: e.target.value})}
             />
 
-            <h2>Email</h2>
             <input
                 placeholder="Email"
                 value={info.email}
                 onChange={(e) => setInfo({...info, email: e.target.value})}
             />
 
-            <h2>General Information</h2>
             <input
-                placeholder="phone"
+                placeholder="Phone"
                 value={info.phone}
                 onChange={(e) => setInfo({...info, phone: e.target.value})}
             />

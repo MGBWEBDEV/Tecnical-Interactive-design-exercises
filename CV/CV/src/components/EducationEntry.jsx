@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/EducationEntry.css";
 
 function EducationEntry({ entry, onUpdate, onDelete }) {
     const [isEditing, setIsEditing] = useState(false);
@@ -6,7 +7,7 @@ function EducationEntry({ entry, onUpdate, onDelete }) {
 
     if (!isEditing) {
         return (
-            <div>
+            <div className="education-entry">
                 <p><strong>School:</strong> {entry.school}</p>
                 <p><strong>Degree:</strong> {entry.degree}</p>
                 <p><strong>Year:</strong> {entry.year}</p>
@@ -21,7 +22,7 @@ function EducationEntry({ entry, onUpdate, onDelete }) {
     }
 
     return (
-        <div>
+        <div className="education-entry">
             <input
                 placeholder="School"
                 value={draft.school}

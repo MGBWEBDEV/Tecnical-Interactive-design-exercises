@@ -1,0 +1,26 @@
+.experience-entry {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background-color: #3a2e4a; /* lighter than the .education section */
+}
+
+.experience-entry h2 {
+    margin-top: 0;
+}
+
+.experience-entry button {
+    margin-right: 0.5rem;
+}
+
+
+.experience-entry input,
+.experience-entry textarea {
+    display: block;
+    margin: 0 auto 0.5rem auto;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+}

@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import ExperienceEntry from './ExperienceEntry.jsx';//import components first
+import '../styles/Experience.css';
 
 function Experience() {
     const [entries, setEntries] = useState([
@@ -27,7 +28,7 @@ function Experience() {
     }
 
     return (
-        <div>
+        <div className="experience">
             <h2>Experience</h2>
             {entries.map(entry => (
                 <ExperienceEntry key={entry.id} entry={entry} onUpdate={updateEntry} onDelete={deleteEntry} />
