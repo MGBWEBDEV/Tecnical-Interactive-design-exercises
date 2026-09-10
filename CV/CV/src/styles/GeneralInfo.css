@@ -1,0 +1,22 @@
+.general-info {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.general-info h2 {
+    margin-top: 0;
+}
+
+.general-info input {
+    display: block;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+.general-info button {
+    margin-right: 0.5rem;
+}

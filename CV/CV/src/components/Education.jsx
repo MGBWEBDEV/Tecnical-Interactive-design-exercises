@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import EducationEntry from './EducationEntry'; //import componets first
+import EducationEntry from './EducationEntry'; //import components first
 
 function Education() {
 const [entries, setEntries] = useState([
@@ -16,12 +16,23 @@ function updateEntry(id, updatedData) {
   setEntries(newEntries);
 }
 
+  function addEntry() {
+    const newEntry = { id: Date.now(), school: "", degree: "", year: "" };
+    setEntries([...entries, newEntry]);
+  }
+
+  function deleteEntry(id) {
+    const newEntries = entries.filter(entry => entry.id !== id);
+    setEntries(newEntries);
+  }
+
 return (
   <div>
     <h2>Education</h2>
     {entries.map(entry => (
-      <EducationEntry key={entry.id} entry={entry} onUpdate={updateEntry} />
+      <EducationEntry key={entry.id} entry={entry} onUpdate={updateEntry} onDelete={deleteEntry} />
     ))}
+    <button onClick={addEntry}>Add Education</button>
   </div>
 );
 
