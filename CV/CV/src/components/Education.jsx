@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import EducationEntry from './EducationEntry'; //import components first
+import "../styles/Education.css";
 
 function Education() {
 const [entries, setEntries] = useState([
@@ -27,7 +28,7 @@ function updateEntry(id, updatedData) {
   }
 
 return (
-  <div>
+  <div className="education">
     <h2>Education</h2>
     {entries.map(entry => (
       <EducationEntry key={entry.id} entry={entry} onUpdate={updateEntry} onDelete={deleteEntry} />

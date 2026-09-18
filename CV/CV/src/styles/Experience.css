@@ -1,16 +1,16 @@
-.general-info {
+.experience {
     border: 1px solid #ccc;
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 8px;
-    background-color: #1e2a3a; /* subtle blue-gray */
+    background-color: #2a1e3a; /* subtle purple tint */
 }
 
-.general-info h2 {
+.experience h2 {
     margin-top: 0;
 }
 
-.general-info input {
+.experience input {
     display: block;
     margin-bottom: 0.5rem;
     padding: 0.5rem;
@@ -18,6 +18,6 @@
     max-width: 300px;
 }
 
-.general-info button {
+.experience button {
     margin-right: 0.5rem;
 }

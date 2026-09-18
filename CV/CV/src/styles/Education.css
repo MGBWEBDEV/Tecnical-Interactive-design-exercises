@@ -1,1 +1,23 @@
+.education {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background-color: #1e3a2e; /* subtle green tint */
+}
 
+.education h2 {
+    margin-top: 0;
+}
+
+.education input {
+    display: block;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+.education button {
+    margin-right: 0.5rem;
+}

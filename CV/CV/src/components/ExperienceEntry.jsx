@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../styles/ExperienceEntry.css';
 
 function ExperienceEntry({ entry, onUpdate, onDelete }) {
     const [isEditing, setIsEditing] = useState(false);
@@ -6,11 +7,11 @@ function ExperienceEntry({ entry, onUpdate, onDelete }) {
 
     if (!isEditing) {
         return (
-            <div>
+            <div className="experience-entry">
                 <p><strong>Company:</strong> {entry.company}</p>
                 <p><strong>Position:</strong> {entry.position}</p>
                 <p><strong>Responsibilities:</strong> {entry.responsibilities}</p>
-                <p><strong>From:</strong> {entry.dateFrom}</p>
+                <p><strong>From:</strong> {entry.dateFrom} </p>
                 <p><strong>To:</strong> {entry.dateTo}</p>
                 <button onClick={() => { setDraft(entry); setIsEditing(true); }}>
                     Edit
@@ -23,7 +24,7 @@ function ExperienceEntry({ entry, onUpdate, onDelete }) {
     }
 
     return (
-        <div>
+        <div className="experience-entry">
             <input
                 placeholder="Company"
                 value={draft.company}
@@ -38,6 +39,7 @@ function ExperienceEntry({ entry, onUpdate, onDelete }) {
                 placeholder="Responsibilities"
                 value={draft.responsibilities}
                 onChange={(e) => setDraft({ ...draft, responsibilities: e.target.value })}
+                rows={4}
             />
             <input
                 placeholder="Date From"

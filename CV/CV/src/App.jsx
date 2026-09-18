@@ -6,8 +6,8 @@ import Experience from "./components/Experience";
 function App() {
   return (
   <>
-  <Education />
   <GeneralInfo />
+  <Education />
   <Experience />
   </>
   );
