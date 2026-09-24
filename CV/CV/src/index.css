@@ -54,6 +54,16 @@ body {
   margin: 0;
 }
 
+.cv-toolbar { padding: 24px; display: grid; justify-items: center; gap: 12px; }
+.cv-toolbar h1 { margin: 0; }
+.cv-sections { border: 0; margin: 0; padding: 0; min-width: 0; }
+button:disabled { opacity: 0.55; cursor: not-allowed; }
+.auth-panel { width: min(400px, 100%); box-sizing: border-box; margin: 32px auto; padding: 24px; }
+.auth-panel fieldset { border: 0; padding: 0; margin-top: 24px; display: grid; gap: 12px; text-align: left; }
+.auth-panel input { box-sizing: border-box; width: 100%; padding: 10px; font: inherit; }
+.auth-panel button { padding: 10px; }
+.auth-panel [role="alert"] { margin-top: 16px; }
+
 #root {
   width: 1126px;
   max-width: 100%;

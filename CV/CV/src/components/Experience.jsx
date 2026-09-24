@@ -1,13 +1,9 @@
-import {useState} from 'react';
-import ExperienceEntry from './ExperienceEntry.jsx';//import components first
+import ExperienceEntry from './ExperienceEntry.jsx';
 import '../styles/Experience.css';
 
-function Experience() {
-    const [entries, setEntries] = useState([
-        { id: 1, company: "", position: "", responsibilities: "", dateFrom: "", dateTo: "" }
-    ]);
+function Experience({ entries, setEntries }) {
 
-    function updateEntry(id, updatedData) {
+function updateEntry(id, updatedData) {
         const newEntries = entries.map(entry => {
             if (entry.id === id) {
                 return { ...entry, ...updatedData };
@@ -18,7 +14,7 @@ function Experience() {
     }
 
     function addEntry() {
-        const newEntry = { id: Date.now(), company: "", position: "", responsibilities: "", dateFrom: "", dateTo: "" };
+        const newEntry = { id: crypto.randomUUID(), company: "", position: "", responsibilities: "", dateFrom: "", dateTo: "" };
         setEntries([...entries, newEntry]);
     }
 

@@ -1,11 +1,7 @@
-import {useState} from 'react';
-import EducationEntry from './EducationEntry'; //import components first
+import EducationEntry from './EducationEntry';
 import "../styles/Education.css";
 
-function Education() {
-const [entries, setEntries] = useState([
-  { id: 1, school: "", degree: "", year: "" }
-]);
+function Education({ entries, setEntries }) {
 
 function updateEntry(id, updatedData) {
   const newEntries = entries.map(entry => {
@@ -18,7 +14,7 @@ function updateEntry(id, updatedData) {
 }
 
   function addEntry() {
-    const newEntry = { id: Date.now(), school: "", degree: "", year: "" };
+    const newEntry = { id: crypto.randomUUID(), school: "", degree: "", year: "" };
     setEntries([...entries, newEntry]);
   }
 

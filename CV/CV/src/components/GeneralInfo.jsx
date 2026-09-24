@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "../styles/GeneralInfo.css";
 
-function GeneralInfo() {
+function GeneralInfo({ info, setInfo }) {
     const [isEditing, setIsEditing] = useState(false);
-    const [info, setInfo] = useState({name: "", email: "", phone: ""});
+    const [draft, setDraft] = useState(info);
 
     if (!isEditing) {
         return (
@@ -12,7 +12,7 @@ function GeneralInfo() {
                 <p><strong>Name:</strong> {info.name}</p>
                 <p><strong>Email:</strong>{info.email}</p>
                 <p><strong>Phone:</strong> {info.phone}</p>
-                <button onClick={() => setIsEditing(true)}>Edit</button>
+                <button onClick={() => { setDraft(info); setIsEditing(true); }}>Edit</button>
             </div>
         )
     }
@@ -22,22 +22,23 @@ function GeneralInfo() {
             <h2>General Information</h2>
             <input
                 placeholder="Name"
-                value={info.name}
-                onChange={(e) => setInfo({...info, name: e.target.value})}
+                value={draft.name}
+                onChange={(e) => setDraft({...draft, name: e.target.value})}
             />
 
             <input
                 placeholder="Email"
-                value={info.email}
-                onChange={(e) => setInfo({...info, email: e.target.value})}
+                value={draft.email}
+                onChange={(e) => setDraft({...draft, email: e.target.value})}
             />
 
             <input
                 placeholder="Phone"
-                value={info.phone}
-                onChange={(e) => setInfo({...info, phone: e.target.value})}
+                value={draft.phone}
+                onChange={(e) => setDraft({...draft, phone: e.target.value})}
             />
-            <button onClick={() => setIsEditing(false)}>Submit</button>
+            <button onClick={() => { setInfo(draft); setIsEditing(false); }}>Submit</button>
+            <button onClick={() => setIsEditing(false)}>Cancel</button>
         </div>
     )
 

@@ -41,7 +41,7 @@ function EducationEntry({ entry, onUpdate, onDelete }) {
             <button onClick={() => { onUpdate(entry.id, draft); setIsEditing(false); }}>
                 Submit
             </button>
-            <button onClick={() => setIsEditing(false)}>
+            <button onClick={() => { setIsEditing(false); }}>
                 Cancel
             </button>
         </div>
